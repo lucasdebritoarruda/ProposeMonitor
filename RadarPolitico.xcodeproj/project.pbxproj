@@ -1,0 +1,344 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A04330C12002931C00CADDD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04330C02002931C00CADDD2 /* AppDelegate.swift */; };
+		A04330C32002931C00CADDD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04330C22002931C00CADDD2 /* ViewController.swift */; };
+		A04330C62002931C00CADDD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04330C42002931C00CADDD2 /* Main.storyboard */; };
+		A04330C92002931C00CADDD2 /* RadarPolitico.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A04330C72002931C00CADDD2 /* RadarPolitico.xcdatamodeld */; };
+		A04330CB2002931C00CADDD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A04330CA2002931C00CADDD2 /* Assets.xcassets */; };
+		A04330CE2002931C00CADDD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04330CC2002931C00CADDD2 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A04330BD2002931C00CADDD2 /* RadarPolitico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadarPolitico.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A04330C02002931C00CADDD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A04330C22002931C00CADDD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A04330C52002931C00CADDD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A04330C82002931C00CADDD2 /* RadarPolitico.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RadarPolitico.xcdatamodel; sourceTree = "<group>"; };
+		A04330CA2002931C00CADDD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A04330CD2002931C00CADDD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A04330CF2002931C00CADDD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A04330BA2002931C00CADDD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A04330B42002931C00CADDD2 = {
+			isa = PBXGroup;
+			children = (
+				A04330BF2002931C00CADDD2 /* RadarPolitico */,
+				A04330BE2002931C00CADDD2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A04330BE2002931C00CADDD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A04330BD2002931C00CADDD2 /* RadarPolitico.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A04330BF2002931C00CADDD2 /* RadarPolitico */ = {
+			isa = PBXGroup;
+			children = (
+				A04330C02002931C00CADDD2 /* AppDelegate.swift */,
+				A04330C22002931C00CADDD2 /* ViewController.swift */,
+				A04330C42002931C00CADDD2 /* Main.storyboard */,
+				A04330CA2002931C00CADDD2 /* Assets.xcassets */,
+				A04330CC2002931C00CADDD2 /* LaunchScreen.storyboard */,
+				A04330CF2002931C00CADDD2 /* Info.plist */,
+				A04330C72002931C00CADDD2 /* RadarPolitico.xcdatamodeld */,
+			);
+			path = RadarPolitico;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A04330BC2002931C00CADDD2 /* RadarPolitico */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A04330D22002931C00CADDD2 /* Build configuration list for PBXNativeTarget "RadarPolitico" */;
+			buildPhases = (
+				A04330B92002931C00CADDD2 /* Sources */,
+				A04330BA2002931C00CADDD2 /* Frameworks */,
+				A04330BB2002931C00CADDD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RadarPolitico;
+			productName = RadarPolitico;
+			productReference = A04330BD2002931C00CADDD2 /* RadarPolitico.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A04330B52002931C00CADDD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Lucas de Brito";
+				TargetAttributes = {
+					A04330BC2002931C00CADDD2 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A04330B82002931C00CADDD2 /* Build configuration list for PBXProject "RadarPolitico" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A04330B42002931C00CADDD2;
+			productRefGroup = A04330BE2002931C00CADDD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A04330BC2002931C00CADDD2 /* RadarPolitico */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A04330BB2002931C00CADDD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A04330CE2002931C00CADDD2 /* LaunchScreen.storyboard in Resources */,
+				A04330CB2002931C00CADDD2 /* Assets.xcassets in Resources */,
+				A04330C62002931C00CADDD2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A04330B92002931C00CADDD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A04330C92002931C00CADDD2 /* RadarPolitico.xcdatamodeld in Sources */,
+				A04330C32002931C00CADDD2 /* ViewController.swift in Sources */,
+				A04330C12002931C00CADDD2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A04330C42002931C00CADDD2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A04330C52002931C00CADDD2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A04330CC2002931C00CADDD2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A04330CD2002931C00CADDD2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A04330D02002931C00CADDD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A04330D12002931C00CADDD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A04330D32002931C00CADDD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUP49TLQUB;
+				INFOPLIST_FILE = RadarPolitico/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucas.RadarPolitico;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A04330D42002931C00CADDD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUP49TLQUB;
+				INFOPLIST_FILE = RadarPolitico/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucas.RadarPolitico;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A04330B82002931C00CADDD2 /* Build configuration list for PBXProject "RadarPolitico" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A04330D02002931C00CADDD2 /* Debug */,
+				A04330D12002931C00CADDD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A04330D22002931C00CADDD2 /* Build configuration list for PBXNativeTarget "RadarPolitico" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A04330D32002931C00CADDD2 /* Debug */,
+				A04330D42002931C00CADDD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A04330C72002931C00CADDD2 /* RadarPolitico.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A04330C82002931C00CADDD2 /* RadarPolitico.xcdatamodel */,
+			);
+			currentVersion = A04330C82002931C00CADDD2 /* RadarPolitico.xcdatamodel */;
+			path = RadarPolitico.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A04330B52002931C00CADDD2 /* Project object */;
+}
