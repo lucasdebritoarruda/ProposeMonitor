@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0037242200591780056B2F3 /* CargosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0037241200591780056B2F3 /* CargosTableViewController.swift */; };
 		A04330C12002931C00CADDD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04330C02002931C00CADDD2 /* AppDelegate.swift */; };
 		A04330C32002931C00CADDD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04330C22002931C00CADDD2 /* ViewController.swift */; };
 		A04330C62002931C00CADDD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04330C42002931C00CADDD2 /* Main.storyboard */; };
 		A04330C92002931C00CADDD2 /* RadarPolitico.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A04330C72002931C00CADDD2 /* RadarPolitico.xcdatamodeld */; };
 		A04330CB2002931C00CADDD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A04330CA2002931C00CADDD2 /* Assets.xcassets */; };
 		A04330CE2002931C00CADDD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04330CC2002931C00CADDD2 /* LaunchScreen.storyboard */; };
+		A06F089C2002B1F100428EE5 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06F089B2002B1F100428EE5 /* CustomCell.swift */; };
+		A06F08A12002B3D200428EE5 /* dick_vigarista_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A06F089F2002B3CE00428EE5 /* dick_vigarista_01.jpg */; };
+		A06F08A22002B3D200428EE5 /* mutley.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A06F08A02002B3CE00428EE5 /* mutley.jpeg */; };
+		A06F08A32002B3D200428EE5 /* penelope.png in Resources */ = {isa = PBXBuildFile; fileRef = A06F089D2002B3CE00428EE5 /* penelope.png */; };
+		A06F08A42002B3D200428EE5 /* peter perfeito.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A06F089E2002B3CE00428EE5 /* peter perfeito.jpg */; };
+		A06F08A62002BE9600428EE5 /* DQ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A06F08A52002BE9400428EE5 /* DQ.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A0037241200591780056B2F3 /* CargosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CargosTableViewController.swift; sourceTree = "<group>"; };
 		A04330BD2002931C00CADDD2 /* RadarPolitico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadarPolitico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A04330C02002931C00CADDD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A04330C22002931C00CADDD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +32,12 @@
 		A04330CA2002931C00CADDD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A04330CD2002931C00CADDD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A04330CF2002931C00CADDD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A06F089B2002B1F100428EE5 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		A06F089D2002B3CE00428EE5 /* penelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = penelope.png; sourceTree = "<group>"; };
+		A06F089E2002B3CE00428EE5 /* peter perfeito.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "peter perfeito.jpg"; sourceTree = "<group>"; };
+		A06F089F2002B3CE00428EE5 /* dick_vigarista_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dick_vigarista_01.jpg; sourceTree = "<group>"; };
+		A06F08A02002B3CE00428EE5 /* mutley.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mutley.jpeg; sourceTree = "<group>"; };
+		A06F08A52002BE9400428EE5 /* DQ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DQ.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +56,11 @@
 			children = (
 				A04330BF2002931C00CADDD2 /* RadarPolitico */,
 				A04330BE2002931C00CADDD2 /* Products */,
+				A06F089F2002B3CE00428EE5 /* dick_vigarista_01.jpg */,
+				A06F08A02002B3CE00428EE5 /* mutley.jpeg */,
+				A06F089D2002B3CE00428EE5 /* penelope.png */,
+				A06F089E2002B3CE00428EE5 /* peter perfeito.jpg */,
+				A06F08A52002BE9400428EE5 /* DQ.jpg */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,10 +78,12 @@
 				A04330C02002931C00CADDD2 /* AppDelegate.swift */,
 				A04330C22002931C00CADDD2 /* ViewController.swift */,
 				A04330C42002931C00CADDD2 /* Main.storyboard */,
+				A0037241200591780056B2F3 /* CargosTableViewController.swift */,
 				A04330CA2002931C00CADDD2 /* Assets.xcassets */,
 				A04330CC2002931C00CADDD2 /* LaunchScreen.storyboard */,
 				A04330CF2002931C00CADDD2 /* Info.plist */,
 				A04330C72002931C00CADDD2 /* RadarPolitico.xcdatamodeld */,
+				A06F089B2002B1F100428EE5 /* CustomCell.swift */,
 			);
 			path = RadarPolitico;
 			sourceTree = "<group>";
@@ -126,6 +147,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A06F08A22002B3D200428EE5 /* mutley.jpeg in Resources */,
+				A06F08A32002B3D200428EE5 /* penelope.png in Resources */,
+				A06F08A62002BE9600428EE5 /* DQ.jpg in Resources */,
+				A06F08A12002B3D200428EE5 /* dick_vigarista_01.jpg in Resources */,
+				A06F08A42002B3D200428EE5 /* peter perfeito.jpg in Resources */,
 				A04330CE2002931C00CADDD2 /* LaunchScreen.storyboard in Resources */,
 				A04330CB2002931C00CADDD2 /* Assets.xcassets in Resources */,
 				A04330C62002931C00CADDD2 /* Main.storyboard in Resources */,
@@ -141,7 +167,9 @@
 			files = (
 				A04330C92002931C00CADDD2 /* RadarPolitico.xcdatamodeld in Sources */,
 				A04330C32002931C00CADDD2 /* ViewController.swift in Sources */,
+				A06F089C2002B1F100428EE5 /* CustomCell.swift in Sources */,
 				A04330C12002931C00CADDD2 /* AppDelegate.swift in Sources */,
+				A0037242200591780056B2F3 /* CargosTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MUP49TLQUB;
 				INFOPLIST_FILE = RadarPolitico/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucas.RadarPolitico;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -296,6 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MUP49TLQUB;
 				INFOPLIST_FILE = RadarPolitico/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucas.RadarPolitico;
 				PRODUCT_NAME = "$(TARGET_NAME)";
