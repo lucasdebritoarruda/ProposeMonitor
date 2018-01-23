@@ -10,9 +10,8 @@ import UIKit
 
 class CargosTableViewController: UITableViewController {
     
-    var cargos = ["Deputados Federais","Senadores"]
+    var cargos = ["Dep. Federais","Senadores"]
     var titulo: String?
-    var teste = [""]
     var indice: Int?
 
 
@@ -34,11 +33,6 @@ class CargosTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        for nome in teste {
-            print(nome)
-        }
-    }
 
     // MARK: - Table view data source
 

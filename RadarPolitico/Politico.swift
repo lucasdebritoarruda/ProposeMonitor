@@ -8,13 +8,15 @@
 
 import UIKit
 
-class Politico{
+class politico{
+    
     var nome: String
     var partido: String
     var foto: String
     var deputado: Bool
+    var tableIndex: Int16
     
-    init(nome: String, partido: String, foto: String, deputado: Bool) {
+    init(nome: String, partido: String, foto: String, deputado: Bool, tableIndex: Int16) {
         
         self.nome = nome
         
@@ -24,6 +26,8 @@ class Politico{
         
         self.deputado = deputado
         
+        self.tableIndex = tableIndex
+
     }
     
 }
