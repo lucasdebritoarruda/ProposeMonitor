@@ -11,15 +11,15 @@ import CoreData
 
 class ViewController: UITableViewController {
     
-    var tableArray1 = ["Dick Vigarista","Mutley"]
-    var arrayFotos1 = ["DQ.jpg","mutley.jpeg"]
-    var tableArray2 = ["Penelope Charmosa","Peter Perfeito"]
-    var arrayFotos2 = ["penelope.png","peter perfeito.jpg"]
     var d = 0
     var s = 0
     var controle = 0
     var deputados = [politico]()
     var senadores = [politico]()
+    
+    
+    var teste = 0
+    var cargo = false
     
 
         
@@ -153,7 +153,9 @@ class ViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
+        
         return 2
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -171,17 +173,27 @@ class ViewController: UITableViewController {
         
     }
     
+    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-            var title = ""
+        var title = ""
         
-            if section == 0 {
-                    title = "Deputados Federais"
-                }else{
-                    title = "Senadores"
-                }
+        switch section {
+        case 0:
+            if self.tableView(tableView, numberOfRowsInSection: section) > 0{
+                title = "Deputados Federais"
+                return title
+            }
+        case 1:
+            if self.tableView(tableView, numberOfRowsInSection: section) > 0{
+                title = "Senadores"
+                return title
+            }
+        default:
+            return nil
+        }
         
-            return title
+        return nil
         
     }
     
@@ -208,6 +220,44 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
         
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        teste = indexPath.row
+        if indexPath.section == 0{
+            cargo = true
+        }else{
+            cargo = false
+        }
+        
+        self.performSegue(withIdentifier: "politicosToPoliticoSelecionado", sender: self)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "politicosToPoliticoSelecionado"{
+            
+            let barViewController = segue.destination as! PerfilTabBarViewController
+            
+            let politico = barViewController.viewControllers![0] as! PoliticoViewController
+            let proposicoes = barViewController.viewControllers![1] as! ProposicoesTableViewController
+            let frequencia = barViewController.viewControllers![2] as! FrequenciaViewController
+            
+            if cargo{
+                politico.nome = deputados[teste].nome
+                politico.imagem = deputados[teste].foto
+            }else{
+                politico.nome = senadores[teste].nome
+                politico.imagem = senadores[teste].foto
+            }
+            
+            proposicoes.teste = teste
+            frequencia.teste = String(teste)
+            
+        }
     }
     
 //    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

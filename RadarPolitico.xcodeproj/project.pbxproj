@@ -22,7 +22,11 @@
 		A06F08A32002B3D200428EE5 /* penelope.png in Resources */ = {isa = PBXBuildFile; fileRef = A06F089D2002B3CE00428EE5 /* penelope.png */; };
 		A06F08A42002B3D200428EE5 /* peter perfeito.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A06F089E2002B3CE00428EE5 /* peter perfeito.jpg */; };
 		A06F08A62002BE9600428EE5 /* DQ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A06F08A52002BE9400428EE5 /* DQ.jpg */; };
+		A08C89E7201E1FC300485E2A /* PoliticoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C89E6201E1FC300485E2A /* PoliticoViewController.swift */; };
+		A08C89EB201E206600485E2A /* FrequenciaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C89EA201E206600485E2A /* FrequenciaViewController.swift */; };
+		A08C89ED201E358400485E2A /* PerfilTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C89EC201E358400485E2A /* PerfilTabBarViewController.swift */; };
 		A0D08E95200D45FE003BC27B /* Politico.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D08E94200D45FE003BC27B /* Politico.swift */; };
+		A0F6EF08202750A2009E23C4 /* ProposicoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6EF07202750A2009E23C4 /* ProposicoesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,9 @@
 		A06F089F2002B3CE00428EE5 /* dick_vigarista_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dick_vigarista_01.jpg; sourceTree = "<group>"; };
 		A06F08A02002B3CE00428EE5 /* mutley.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mutley.jpeg; sourceTree = "<group>"; };
 		A06F08A52002BE9400428EE5 /* DQ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DQ.jpg; sourceTree = "<group>"; };
+		A08C89E6201E1FC300485E2A /* PoliticoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticoViewController.swift; sourceTree = "<group>"; };
+		A08C89EA201E206600485E2A /* FrequenciaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequenciaViewController.swift; sourceTree = "<group>"; };
+		A08C89EC201E358400485E2A /* PerfilTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilTabBarViewController.swift; sourceTree = "<group>"; };
 		A0D08E94200D45FE003BC27B /* Politico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Politico.swift; sourceTree = "<group>"; };
 		A0D08E96200D5078003BC27B /* Velma.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Velma.jpg; sourceTree = "<group>"; };
 		A0D08E97200D5078003BC27B /* barney.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barney.jpg; sourceTree = "<group>"; };
@@ -50,6 +57,7 @@
 		A0D08E99200D5079003BC27B /* capitaocaverna.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = capitaocaverna.jpg; sourceTree = "<group>"; };
 		A0D08E9A200D5079003BC27B /* Salsicha.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Salsicha.jpg; sourceTree = "<group>"; };
 		A0D08E9B200D5079003BC27B /* scooby.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scooby.jpg; sourceTree = "<group>"; };
+		A0F6EF07202750A2009E23C4 /* ProposicoesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposicoesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +102,11 @@
 			isa = PBXGroup;
 			children = (
 				A04330C42002931C00CADDD2 /* Main.storyboard */,
+				A08C89E6201E1FC300485E2A /* PoliticoViewController.swift */,
+				A0F6EF07202750A2009E23C4 /* ProposicoesTableViewController.swift */,
+				A08C89EA201E206600485E2A /* FrequenciaViewController.swift */,
 				A04330C02002931C00CADDD2 /* AppDelegate.swift */,
+				A08C89EC201E358400485E2A /* PerfilTabBarViewController.swift */,
 				A04330C22002931C00CADDD2 /* ViewController.swift */,
 				A06F089B2002B1F100428EE5 /* CustomCell.swift */,
 				A0037241200591780056B2F3 /* CargosTableViewController.swift */,
@@ -188,10 +200,14 @@
 			files = (
 				A04F7AAA200AAF75008B1D3E /* PoliticoCell.swift in Sources */,
 				A04330C92002931C00CADDD2 /* RadarPolitico.xcdatamodeld in Sources */,
+				A08C89E7201E1FC300485E2A /* PoliticoViewController.swift in Sources */,
 				A04330C32002931C00CADDD2 /* ViewController.swift in Sources */,
 				A04F7AAC200AB0ED008B1D3E /* CargoSelecionadoTableViewController.swift in Sources */,
 				A0D08E95200D45FE003BC27B /* Politico.swift in Sources */,
 				A06F089C2002B1F100428EE5 /* CustomCell.swift in Sources */,
+				A08C89ED201E358400485E2A /* PerfilTabBarViewController.swift in Sources */,
+				A0F6EF08202750A2009E23C4 /* ProposicoesTableViewController.swift in Sources */,
+				A08C89EB201E206600485E2A /* FrequenciaViewController.swift in Sources */,
 				A04330C12002931C00CADDD2 /* AppDelegate.swift in Sources */,
 				A0037242200591780056B2F3 /* CargosTableViewController.swift in Sources */,
 			);

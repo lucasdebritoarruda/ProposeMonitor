@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -93,6 +94,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="7dH-mh-oaQ" kind="show" identifier="politicosToPoliticoSelecionado" id="PoJ-8l-OBW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbt-e8-x0w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,6 +146,131 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aDe-je-gJq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1307.5" y="124.5"/>
+        </scene>
+        <!--Proposições-->
+        <scene sceneID="2eD-B4-f2J">
+            <objects>
+                <tableViewController title="Proposições" id="D1N-J2-oXo" customClass="ProposicoesTableViewController" customModule="RadarPolitico" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fQe-Kp-AJj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProposicoesCell" id="6Rt-Ud-GF3">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ProposicoesCell" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Rt-Ud-GF3" id="441-oi-e2e">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="D1N-J2-oXo" id="Udo-CR-73A"/>
+                            <outlet property="delegate" destination="D1N-J2-oXo" id="Zib-mK-YOD"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Proposiçoes" id="thD-lM-8Dw"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJM-EY-4d3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="585" y="1675"/>
+        </scene>
+        <!--Item 3-->
+        <scene sceneID="wmM-MO-tez">
+            <objects>
+                <viewController id="RGy-Va-fBn" userLabel="Item 3" customClass="FrequenciaViewController" customModule="RadarPolitico" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1l4-Io-a2U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KB-C4-Opz">
+                                <rect key="frame" x="166" y="323" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2Iy-n4-Dil"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Frequência" id="rdF-xf-mv0"/>
+                    <connections>
+                        <outlet property="frequenciaLabel" destination="3KB-C4-Opz" id="dk1-V3-J7U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HMc-8J-tN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1407" y="1675"/>
+        </scene>
+        <!--Político-->
+        <scene sceneID="bha-PG-Sl2">
+            <objects>
+                <viewController id="GQp-JT-N25" customClass="PoliticoViewController" customModule="RadarPolitico" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Epz-U4-QVg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJ9-FE-wYy">
+                                <rect key="frame" x="159" y="148" width="58" height="28"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dqR-VG-izU">
+                                <rect key="frame" x="147" y="184" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="9VW-b4-kP5"/>
+                                    <constraint firstAttribute="height" constant="80" id="YFh-ac-eFC"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufL-7O-2ie">
+                                <rect key="frame" x="0.0" y="328" width="375" height="344"/>
+                                <color key="backgroundColor" red="1" green="0.98632532358169556" blue="0.8610338568687439" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dqR-VG-izU" firstAttribute="centerX" secondItem="Epz-U4-QVg" secondAttribute="centerX" id="3Sn-yz-0kx"/>
+                            <constraint firstItem="ufL-7O-2ie" firstAttribute="leading" secondItem="1Wd-Yb-Pii" secondAttribute="leading" id="63M-kP-K6j"/>
+                            <constraint firstAttribute="bottom" secondItem="ufL-7O-2ie" secondAttribute="bottom" constant="-5" id="9v3-Ey-jkU"/>
+                            <constraint firstItem="ufL-7O-2ie" firstAttribute="top" secondItem="Epz-U4-QVg" secondAttribute="top" constant="328" id="JKH-VG-4In"/>
+                            <constraint firstItem="BJ9-FE-wYy" firstAttribute="top" secondItem="1Wd-Yb-Pii" secondAttribute="top" constant="84" id="Jwa-Qp-kUe"/>
+                            <constraint firstItem="ufL-7O-2ie" firstAttribute="trailing" secondItem="1Wd-Yb-Pii" secondAttribute="trailing" id="UQW-sh-4NC"/>
+                            <constraint firstItem="dqR-VG-izU" firstAttribute="top" secondItem="BJ9-FE-wYy" secondAttribute="bottom" constant="8" symbolic="YES" id="cd9-3q-rgM"/>
+                            <constraint firstItem="BJ9-FE-wYy" firstAttribute="centerX" secondItem="Epz-U4-QVg" secondAttribute="centerX" id="pmH-v1-9iA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Wd-Yb-Pii"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Político" id="09o-ec-EfR"/>
+                    <connections>
+                        <outlet property="foto" destination="dqR-VG-izU" id="b0l-n9-S29"/>
+                        <outlet property="nomeFicticio" destination="BJ9-FE-wYy" id="gSb-sb-DOy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GBj-HE-zHo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-204" y="1674.5127436281859"/>
+        </scene>
+        <!--Proposições-->
+        <scene sceneID="5OL-lg-tKT">
+            <objects>
+                <tabBarController title="Proposições" id="7dH-mh-oaQ" customClass="PerfilTabBarViewController" customModule="RadarPolitico" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jMN-D8-CcU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="GQp-JT-N25" kind="relationship" relationship="viewControllers" id="a5H-Vp-8B7"/>
+                        <segue destination="D1N-J2-oXo" kind="relationship" relationship="viewControllers" id="3pe-7Z-Dzc"/>
+                        <segue destination="RGy-Va-fBn" kind="relationship" relationship="viewControllers" id="ObP-av-ODJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wRz-YK-X6R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="585" y="900"/>
         </scene>
         <!--Cargo Selecionado-->
         <scene sceneID="as2-wO-bZ9">
