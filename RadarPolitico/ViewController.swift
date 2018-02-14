@@ -10,12 +10,13 @@ import UIKit
 import CoreData
 
 class ViewController: UITableViewController {
-    
-    var d = 0
-    var s = 0
+
     var controle = 0
     var deputados = [politico]()
     var senadores = [politico]()
+    
+    var switchStatesDeputados = [Bool]()
+    var switchStatesSenadores = [Bool]()
     
     
     var teste = 0
@@ -60,11 +61,13 @@ class ViewController: UITableViewController {
                     if p.deputado{
                         
                         deputados.append(p)
+                        
                         print("Deputado "+p.nome+" adcionado a lista de deputados")
                         
                     }else{
                         
                         senadores.append(p)
+                        
                         print("Senador(a) "+p.nome+" adcionado a lista de senadores")
                         
                     }
@@ -79,8 +82,6 @@ class ViewController: UITableViewController {
             
         }
         
-        d = deputados.count
-        s = senadores.count
 
     }
     
@@ -110,9 +111,13 @@ class ViewController: UITableViewController {
                 for result in results as! [NSManagedObject]{
                     
                     let nome = result.value(forKey: "nome") as! String
+                    
                     let partido = result.value(forKey: "partido") as! String
+                    
                     let foto = result.value(forKey: "foto") as! String
+                    
                     let tableIndex = result.value(forKey: "tableIndex") as! Int16
+                    
                     let deputado = result.value(forKey: "deputado") as! Bool
                     
                     let p = politico(nome: nome, partido: partido, foto: foto, deputado: deputado, tableIndex: tableIndex)
@@ -122,11 +127,13 @@ class ViewController: UITableViewController {
                     if p.deputado{
                         
                         deputados.append(p)
+                        
                         print("Deputado "+p.nome+" adcionado a lista de deputados")
                         
                     }else{
                         
                         senadores.append(p)
+                        
                         print("Senador(a) "+p.nome+" adcionado a lista de senadores")
                         
                     }
@@ -141,10 +148,8 @@ class ViewController: UITableViewController {
             
         }
         
-        d = deputados.count
-        s = senadores.count
-        
         self.tableView.reloadData()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -163,10 +168,10 @@ class ViewController: UITableViewController {
             var x = 0
             
             if section == 0{
-                x = d
+                x = deputados.count
             }
             if section == 1{
-                x = s
+                x = senadores.count
             }
             
             return x
@@ -238,38 +243,175 @@ class ViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "politicosToPoliticoSelecionado"{
             
             let barViewController = segue.destination as! PerfilTabBarViewController
             
             let politico = barViewController.viewControllers![0] as! PoliticoViewController
+            
             let proposicoes = barViewController.viewControllers![1] as! ProposicoesTableViewController
+            
             let frequencia = barViewController.viewControllers![2] as! FrequenciaViewController
             
             if cargo{
+                
                 politico.nome = deputados[teste].nome
+                
                 politico.imagem = deputados[teste].foto
+                
             }else{
+                
                 politico.nome = senadores[teste].nome
+                
                 politico.imagem = senadores[teste].foto
+                
             }
             
             proposicoes.teste = teste
             frequencia.teste = String(teste)
             
         }
+        
     }
     
-//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        
-//        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: self.tableView.bounds.size.width, height: 30))
-//        
-//        headerView.backgroundColor = UIColor.gray
-//        
-//        return headerView
-//        
-//    }
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        
+        return true
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete{
+            
+            if indexPath.section == 0 {
+                
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                
+                let context = appDelegate.persistentContainer.viewContext
+                
+                let request = NSFetchRequest<NSFetchRequestResult>(entityName:"Parlamentar")
+                
+                request.predicate = NSPredicate(format: "nome = %@", deputados[indexPath.row].nome)
+                
+                request.returnsObjectsAsFaults = false
+                
+                do{
+                    
+                    let results = try context.fetch(request)
+                    
+                    if results.count > 0{
+                        
+                        for result in results as! [NSManagedObject]{
+                            
+                            context.delete(result)
+                            
+                            do{
+                                
+                                try context.save()
+                                print("Deputado " + deputados[indexPath.row].nome + " deletado do Core Data")
+                                
+                            }catch{
+                                
+                                print("Error")
+                                
+                            }
+                            
+                        }
+                        
+                    }
+                    
+                }catch{
+                    
+                    print("Deu merda")
+                    
+                }
+                
+                
+                let x = UserDefaults.standard.array(forKey: "switchStatesDeputados")
+                
+                if let switchStateAUX = x as? [Bool] {
+                    
+                    switchStatesDeputados = switchStateAUX
+                    
+                }
+                
+                switchStatesDeputados[Int(deputados[indexPath.row].tableIndex)] = false
+                
+                UserDefaults.standard.set(switchStatesDeputados, forKey: "switchStatesDeputados")
+                
+                deputados.remove(at: indexPath.row)
+                
+                self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+                
+            }else{
+                
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                
+                let context = appDelegate.persistentContainer.viewContext
+                
+                let request = NSFetchRequest<NSFetchRequestResult>(entityName:"Parlamentar")
+                
+                request.predicate = NSPredicate(format: "nome = %@", senadores[indexPath.row].nome)
+                
+                request.returnsObjectsAsFaults = false
+                
+                do{
+                    
+                    let results = try context.fetch(request)
+                    
+                    if results.count > 0{
+                        
+                        for result in results as! [NSManagedObject]{
+                            
+                            context.delete(result)
+                            
+                            do{
+                                
+                                try context.save()
+                                print("Deputado " + senadores[indexPath.row].nome + " deletado do Core Data")
+                                
+                            }catch{
+                                
+                                print("Error")
+                                
+                            }
+                            
+                        }
+                        
+                    }
+                    
+                }catch{
+                    
+                    print("Deu merda")
+                    
+                }
+                
+                
+                
+                let x = UserDefaults.standard.array(forKey: "switchStatesSenadores")
+                
+                if let switchStateAUX = x as? [Bool] {
+                    
+                    switchStatesSenadores = switchStateAUX
+                    
+                }
+                
+                switchStatesSenadores[Int(senadores[indexPath.row].tableIndex)] = false
+                
+                UserDefaults.standard.set(switchStatesSenadores, forKey: "switchStatesSenadores")
+                
+                senadores.remove(at: indexPath.row)
+                
+                self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
 
-
+                
+            }
+            
+        }
+        
+    }
+    
 }
 
