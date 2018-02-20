@@ -82,7 +82,7 @@ class ViewController: UITableViewController {
             
         }
         
-
+        
     }
     
     
@@ -157,11 +157,7 @@ class ViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        
-        return 2
-        
-    }
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
@@ -195,6 +191,7 @@ class ViewController: UITableViewController {
                 return title
             }
         default:
+            
             return nil
         }
         
@@ -207,19 +204,30 @@ class ViewController: UITableViewController {
         
                 if indexPath.section == 0{
                     
+                        tableView.separatorStyle = .singleLine
+                    
+                        tableView.backgroundView = nil
+                    
                         cell.nomePolitico.text = deputados[indexPath.row].nome
+                    
                         cell.fotoPolitico.image = UIImage(named:deputados[indexPath.row].foto)
                     
                 } else {
                     
+                        tableView.separatorStyle = .singleLine
+                    
+                        tableView.backgroundView = nil
+                    
                         cell.nomePolitico.text = senadores[indexPath.row].nome
+                    
                         cell.fotoPolitico.image = UIImage(named:senadores[indexPath.row].foto)
                     
                     }
         
-                        cell.fotoPolitico.layer.cornerRadius = cell.fotoPolitico.frame.height/2
+                cell.fotoPolitico.layer.cornerRadius = cell.fotoPolitico.frame.height/2
         
                 return cell
+        
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -410,6 +418,48 @@ class ViewController: UITableViewController {
             }
             
         }
+        
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        
+        
+        
+        if tableView.numberOfRows(inSection: 0) == 0 && tableView.numberOfRows(inSection: 1) == 0{
+
+
+            let rect = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+
+            let messageLabel = UILabel(frame: rect)
+
+            messageLabel.text = "Você não está seguindo nenhum político no momento. Toque no icone + para adicioná-los."
+
+            messageLabel.textColor = UIColor.black
+
+            messageLabel.numberOfLines = 0
+
+            messageLabel.textAlignment = .center
+
+           // messageLabel.font = UIFont(name: "TrebuchetMS", size: 15)
+
+            messageLabel.sizeToFit()
+
+            self.tableView.backgroundView = messageLabel
+
+            tableView.separatorStyle = .none
+
+            print(tableView.numberOfRows(inSection: 0) + tableView.numberOfRows(inSection: 1))
+
+
+        }
+        
+        return 2
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        tableView.reloadData()
         
     }
     
